@@ -1,0 +1,46 @@
+# EDR Script
+
+
+departments
+-
+dept_no PK string FK >- dept_emp.dept_no
+dept_name string
+	
+dept_emp
+-
+emp_no ,
+dept_no VARCHAR(30) 
+from_date VARCHAR(30) 
+to_date VARCHAR(30)
+
+dept_manager
+-
+dept_no VARCHAR(30), FK >- departments.dept_no
+emp_no VARCHAR(30), FK >- employees.emp_no
+from_date VARCHAR(30),
+to_date VARCHAR(30)
+
+employees
+-
+emp_no PK VARCHAR(30), FK >- dept_emp.emp_no
+birth_date VARCHAR(30),
+first_name VARCHAR(30),
+last_name VARCHAR(30),
+gender VARCHAR(30),
+hire_date VARCHAR(30)
+
+salaries
+-
+emp_no VARCHAR(30), FK >- employees.emp_no
+salary VARCHAR(30),
+from_date VARCHAR(30),
+to_date VARCHAR(30)
+
+titles 
+-
+emp_no VARCHAR(30), FK >- employees.emp_no
+title VARCHAR(30),
+from_date VARCHAR(30),
+to_date VARCHAR(30)
+
+
